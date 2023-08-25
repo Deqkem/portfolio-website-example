@@ -1,0 +1,66 @@
+.modal-request
+  &__container
+    background-color: #EEEFF1
+    padding: 5rem 5rem
+    @include respond(phone)
+      padding: 3rem
+  &__title
+    margin-bottom: 3.8rem
+  &__text
+    max-width: 54rem
+    margin: 0 auto
+    text-align: center
+    margin-bottom: 5.8rem
+  &__form
+    width: 100%
+  &__fieldset
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: min-content min-content
+    column-gap: 3rem
+    row-gap: 2rem
+    color: #5F5D5D
+    font-size: 1.4rem
+    font-weight: 400
+    line-height: 164.063%
+    margin-bottom: 5rem
+    @include respond(phone)
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, min-content)
+  &__input
+    color: #5F5D5D
+    font-size: 1.4rem
+    font-weight: 400
+    line-height: 164.063%
+    padding: 1.4rem 1.8rem 1.1rem 2rem
+    border: .1rem solid #fff
+    transition: all .15s ease-in-out
+    &_is_message
+      grid-column: 1 / -1
+      height: 17.5rem
+      resize: none
+    &:hover, &:active
+      border-color: $color-accent
+    &:focus-visible
+      outline: none
+      border-color: $color-accent
+  &__button
+    background-color: $color-accent
+    color: #FFF
+    text-align: center
+    font-size: 1.4rem
+    font-weight: 400
+    line-height: 164.063%
+    letter-spacing: 2.1px
+    width: 19rem
+    height: 5.5rem
+    display: block
+    margin: 0 auto
+    transition: transform .1s ease, background-color .15s ease-in-out
+    &:hover
+      background-color: #18549e
+    &:focus-visible
+      outline: none
+      background-color: #18549e
+    &:active 
+      transform: translate(.1rem, .2rem)

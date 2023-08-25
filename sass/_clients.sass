@@ -1,0 +1,15 @@
+.clients
+  padding-top: 7.2rem
+  padding-bottom: 10rem
+  &__list
+    padding-left: 2.1rem
+    padding-right: 2.1rem
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 3rem
+    @include respond(medium-screen)
+      grid-template-columns: repeat(2, 1fr)
+      justify-content: center
+      justify-items: center
+  &__item
+    max-width: 25.5rem

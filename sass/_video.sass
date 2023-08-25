@@ -1,0 +1,31 @@
+.video
+  padding-top: 10rem
+  padding-bottom: 12.8rem
+  &__title
+    margin-bottom: 3.7rem
+  &__text
+    max-width: 54rem
+    text-align: center
+    margin: 0 auto
+    margin-bottom: 5rem
+  &__wrap
+    background-image: url(../img/video-bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    max-width: 111rem
+    height: 60rem
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    cursor: pointer
+    @include respond(medium-screen)
+      max-width: 70rem
+      height: 40rem
+  &__icon-play
+    width: 10rem
+    height: 10rem
+    color: #fff
+    &:hover
+      color: $color-accent

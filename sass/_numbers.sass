@@ -1,0 +1,37 @@
+.numbers
+  background-color: $color-accent
+  padding-top: 10rem
+  padding-bottom: 9.6rem
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, 14.1rem)
+    gap: 4.9rem
+    padding-left: 2.1rem
+    @include respond(big-screen)
+      justify-content: center
+      padding-left: 0
+  &__item
+    display: grid
+    grid-template-columns: max-content min-content
+    grid-template-rows: min-content min-content
+    column-gap: 2rem
+    row-gap: .2rem
+    color: #FFF
+  &__icon
+    width: 5rem
+    height: 5rem
+    color: #fff
+    grid-column: 1 / 2
+    grid-row: 1 / -1
+  &__title
+    grid-column: 2 / 3
+    grid-row: 1 / 2
+    font-size: 2.1rem
+    font-weight: 500
+    line-height: normal
+  &__text
+    grid-column: 2 / 3
+    grid-row: 2 / 3
+    font-size: 1.6rem
+    font-weight: 400
+    line-height: 164.063%

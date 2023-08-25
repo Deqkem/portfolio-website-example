@@ -1,0 +1,79 @@
+$color-accent: #34547A
+$color-silver: #EEEFF1
+
+$container: 115.2rem
+$container-padding: 1.5rem
+
+@mixin respond($breakpoint)
+  @if $breakpoint == phone
+    @media (max-width: 575px)
+      @content
+  @if $breakpoint == small-screen
+    @media (max-width: 767px)
+      @content
+  @if $breakpoint == medium-screen
+    @media (max-width: 900px)
+      @content
+  @if $breakpoint == big-screen
+    @media (max-width: 1140px)
+      @content
+
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  position: relative
+  overflow-x: hidden
+  @include respond(big-screen)
+    font-size: 56.25%
+  @include respond(medium-screen)
+    font-size: 50%
+  @include respond(phone)
+    font-size: 40%
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body 
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  color: black
+  background-color: #F9F9F9
+  position: relative
+  overflow-x: hidden
+
+img, svg
+  max-width: 100%
+  max-height: 100%
+  height: auto
+  display: block
+
+button 
+  padding: 0
+  background-color: transparent
+  border: none
+  cursor: pointer
+
+a 
+  text-decoration: none
+  color: inherit
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+h1, h2, h3, h4, h5, h6, p, figure 
+  margin: 0
+
+
+fieldset
+  margin: 0
+  padding: 0
+  border: 0
+
+.container
+  max-width: calc($container + $container-padding * 2)
+  padding: 0 $container-padding
+  margin: 0 auto

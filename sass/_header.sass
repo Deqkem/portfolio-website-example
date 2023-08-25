@@ -1,0 +1,112 @@
+.header
+  background-color: #EEEFF1
+  &__container
+    padding-top: 5rem
+    padding-bottom: 14.6rem
+    @include respond(small-screen)
+      padding-top: 1.3rem
+  &__top-wrap
+    padding-left: 2rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 13rem
+  &__logo
+    color: $color-accent
+    text-align: center
+    font-family: Revalia
+    font-size: 4.8rem
+    font-weight: 400
+    line-height: normal
+    text-transform: uppercase
+  &__navigation
+    margin-right: 3.3rem
+    @include respond(small-screen)
+      margin-right: 0
+  &__title-container
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(3, min-content)
+    row-gap: 3.3rem
+    column-gap: 3rem
+    @include respond(medium-screen)
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(4, max-content)
+      justify-items: center
+  &__img
+    grid-column: 1 / 2
+    grid-row: 1 / -1
+    background-image: url(../img/header-code.svg)
+    background-position: 10rem 3rem
+    background-size: 35.7rem
+    background-repeat: no-repeat
+    @include respond(medium-screen)
+      grid-column: 1 / -1
+      grid-row: 1 / 2
+      width: 35.7rem
+      height: 23.4rem
+      background-position: center
+      background-size: cover
+  &__text
+    max-width: 54rem
+    margin-bottom: 2rem
+
+.navigation
+  @include respond(small-screen)
+    position: fixed
+    top: 0
+    right: -100%
+    height: 100vh
+    width: 50%
+    background: $color-accent
+    z-index: 10
+    transition: 0.6s all
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, max-content)
+    column-gap: 4.2rem
+    @include respond(small-screen)
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      align-items: center
+  &__link
+    color: #000
+    font-size: 1.6rem
+    font-weight: 400
+    line-height: 164.063%
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    transition: color .1s ease
+    @include respond(small-screen)
+      color: #fff
+      font-size: 2rem
+    &:hover
+      color: $color-accent
+      @include respond(small-screen)
+        color: #000
+.navigation_active
+  right: 0
+
+.button
+  color: #FFF
+  text-align: center
+  font-size: 1.6rem
+  font-weight: 400
+  line-height: 164.063%
+  letter-spacing: 1.6px
+  background-color: $color-accent
+  width: 22.5rem
+  height: 6.5rem
+  text-transform: uppercase
+  transition: transform .1s ease, background-color .15s ease-in-out
+  &:hover
+    background-color: #18549e
+  &:focus-visible
+    outline: none
+    background-color: #18549e
+  &:active 
+    transform: translate(.1rem, .2rem)
+
+

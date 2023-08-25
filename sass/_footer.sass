@@ -1,0 +1,37 @@
+.footer
+  max-width: 100%
+  padding: 5rem 0
+  background-color: $color-accent
+  &__wrap
+    padding-left: 2.2rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, min-content)
+    gap: .9rem
+  &__development
+    grid-column: 1 / 2
+    grid-row: 1 / 2
+    color: #FFF
+    font-size: 2.1rem
+    font-weight: 500
+    line-height: normal
+  &__copyright
+    grid-column: 1 / 2
+    grid-row: 2 / 3
+    color: #FFF
+    font-size: 1.3rem
+    font-weight: 400
+    line-height: 164.063%
+  &__list
+    grid-column: 2 / 3
+    grid-row: 1 / -1
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2.2rem
+    align-items: center
+    justify-self: end
+  &__icon
+    width: 4.4rem
+    color: #fff
+  &__item:hover &__icon
+    color: #EEEFF1

@@ -1,0 +1,25 @@
+.projects
+  &__container
+    max-width: 100%
+    padding: 0
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    @include respond(small-screen)
+      grid-template-columns: repeat(2, 1fr)
+  &__item
+    position: relative
+  &__item-filter
+    position: absolute
+    inset: 0
+    z-index: 2
+    background-color: rgba(52, 84, 122, 80%)
+    background-image: url(../icons/eye.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 10rem
+    opacity: 0
+    transition: all .2s ease-in-out
+
+.projects__item:hover .projects__item-filter
+  opacity: 1
